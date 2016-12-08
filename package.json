@@ -1,0 +1,26 @@
+{
+  "name": "lettposts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/babel-node server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.13.2",
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.6.7",
+    "cheerio": "^0.22.0",
+    "consign": "^0.1.2",
+    "express": "^4.14.0",
+    "mongo-sanitize": "^1.0.0",
+    "mongoose": "4.6.4",
+    "request": "^2.79.0"
+  }
+}
