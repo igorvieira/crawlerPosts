@@ -9,6 +9,9 @@ let post = mongoose.Schema({
     required:true,   
 
   },
+  formato:{
+    type:String,
+  },
   data:{
    data:Date
   },
@@ -16,6 +19,7 @@ let post = mongoose.Schema({
     type:String,
     required:true
   }
+  
 
 })
 

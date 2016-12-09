@@ -1,35 +1,48 @@
+Backbone.Model.prototype.idAttribute = '_id';
 
-var Blog = Backbone.Model.extend({
+// Backbone Model
+
+var Post = Backbone.Model.extend({
 	defaults: {
-		author: '',
-		title: '',
-		url: ''
+		titulo:'',
+		formato: '',
+		fonte: ''
 	}
 });
 
 // Backbone Collection
 
-var Blogs = Backbone.Collection.extend({});
-
+var Posts = Backbone.Collection.extend({
+	url: 'http://localhost:3000/api/manchetes'
+});
 
 // instantiate a Collection
 
-var blogs = new Blogs();
+var posts = new Posts();
 
+// Backbone View for one post
 
-var BlogView = Backbone.View.extend({
-	model: new Blog(),
+var PostView = Backbone.View.extend({
+	model: new Post(),
 	tagName: 'tr',
-    events:{
-        'click .edit-blog':'edit'
-    },
-    edit:function(){
-        $('.edit-blog')
-    },
 	initialize: function() {
-		this.template = _.template($('.blogs-list-template').html());
+		this.template = _.template($('.posts-list-template').html());
 	},
-    render: function() {
+	events: {
+		'click .delete-post': 'delete'
+	},
+	delete: function() {
+	this.model.destroy({
+		success: function(response) {
+			console.log('Successfully DELETED blog with _id: ' + response.toJSON()._id);
+		},
+		error: function(err) {
+			console.log('Failed to delete blog!');
+		}
+	});
+	},
+
+	render: function() {
 		this.$el.html(this.template(this.model.toJSON()));
 		return this;
 	}
@@ -37,37 +50,64 @@ var BlogView = Backbone.View.extend({
 
 
 
-var BlogsView = Backbone.View.extend({
-	model: blogs,
-	el: $('.blogs-list'),
+var PostsView = Backbone.View.extend({
+	model: posts,
+	el: $('.posts-list'),
 	initialize: function() {
 		var self = this;
 		this.model.on('add', this.render, this);
-    },
-    render: function() {
+		this.model.on('change', function() {
+			setTimeout(function() {
+				self.render();
+			}, 30);
+		},this);
+		this.model.on('remove', this.render, this);
+
+		this.model.fetch({
+			success: function(response) {
+				_.each(response.toJSON(), function(item) {
+					console.log('Successfully GOT post with _id: ' + item._id);
+				})
+			},
+			error: function() {
+				console.log('Failed to get posts!');
+			}
+		});
+	},
+	render: function() {
 		var self = this;
 		this.$el.html('');
-		_.each(this.model.toArray(), function(blog) {
-			self.$el.append((new BlogView({model: blog})).render().$el);
+		_.each(this.model.toArray(), function(post) {
+			self.$el.append((new PostView({model: post})).render().$el);
 		});
 		return this;
 	}
 });
 
-var blogsView = new BlogsView();
+var postsView = new PostsView();
 
 $(document).ready(function() {
-	$('.add-blog').on('click', function() {
-		var blog = new Blog({
-			author: $('.author-input').val(),
-			title: $('.title-input').val(),
-			url: $('.url-input').val()
+	$('.add-post').on('click', function() {
+		var post= new Post({
+			formato: $('.formato-input').val(),
+			fonte: $('.fonte-input').val()
 		});
-		$('.author-input').val('');
-		$('.title-input').val('');
-		$('.url-input').val('');
-		console.log(blog.toJSON());
-		blogs.add(blog);
-	})
-})
+		$('.formato-input').val('');
+		$('.fonte-input').val('');
+		posts.add(post);
+		post.save(null, {
+			success: function(response) {
+				console.log('Successfully SAVED post with _id: ' + response.toJSON()._id);
+			},
+			error: function(error) {
+				console.log('Failed to save post!'+error);
+			}
+		});
+		setTimeout(function(){
+			location.reload();
+		},1000)
+	});
 
+	
+
+})

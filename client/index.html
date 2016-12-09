@@ -10,34 +10,37 @@
    
 </head>
 <body>
-    <body>
-	<div class="container">
-		<h1>Backbone Tutorial Blogroll App</h1>
+<div class="container">
+		<h1>Backbone Miner!</h1>
 
 		<table class="table">
 			<thead>
 				<tr>
-					<th>Author</th>
-					<th>Title</th>
-					<th>URL</th>
+				
+					<th>Formato</th>
+					<th>Fonte</th>
 					<th>Action</th>
 				</tr>
 				<tr>
-					<td><input class="form-control author-input"></td>
-					<td><input class="form-control title-input"></td>
-					<td><input class="form-control url-input"></td>
-					<td><button class="btn btn-primary add-blog">Add</button></td>
+					<td><input class="form-control formato-input"></td>
+					<td><input class="form-control fonte-input"></td>
+					<td><button class="btn btn-primary add-post">Add</button></td>
+				</tr>
+				<tr>
+				
+					<th>Principais Manchetes</th>
+					<th>Fonte</th>
+					<th>Action</th>
 				</tr>
 			</thead>
-			<tbody class="blogs-list"></tbody>
+			<tbody class="posts-list"></tbody>
 		</table>
 	</div>
 
-	<script type="text/template" class="blogs-list-template">
-	<td><span class="author"><%= author %></span></td>
-	<td><span class="title"><%= title %></span></td>
-	<td><span class="url"><%= url %></span></td>
-	<td><button class="btn btn-warning edit-blog">Edit</button> <button class="btn btn-danger delete-blog">Delete</button><button class="btn btn-success update-blog" style="display:none">Update</button> <button class="btn btn-danger cancel" style="display:none">Cancel</button></td>
+	<script type="text/template" class="posts-list-template">
+	<td><a href="#"><span class="titulo"><%= titulo %></span></a></td>
+	<td><span class="fonte"><%= fonte %></span></td>
+	<td><button class="btn btn-danger delete-post">Delete</button></td>
 
 	</script>
      <script src="./vendor/jquery/dist/jquery.js"></script>
