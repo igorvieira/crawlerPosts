@@ -1,0 +1,1 @@
+function crawlerThisWebSite(){var e=document.getElementById("formato").value,t=document.getElementById("fonte").value;""==e&&""==t?swal({title:"Error!",text:"Por favor preencha os campos!",type:"error",timer:2e3,confirmButtonText:"Fechar"}):swal({title:"Sweet!",text:"Carregando os dados",timer:2e3,imageUrl:"./dist/images/loader.gif"})}

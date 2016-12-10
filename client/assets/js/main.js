@@ -22,6 +22,9 @@ var posts = new Posts();
 
 // Backbone View for one post
 
+
+
+
 var PostView = Backbone.View.extend({
 	model: new Post(),
 	tagName: 'tr',
@@ -32,14 +35,14 @@ var PostView = Backbone.View.extend({
 		'click .delete-post': 'delete'
 	},
 	delete: function() {
-	this.model.destroy({
-		success: function(response) {
-			console.log('Successfully DELETED blog with _id: ' + response.toJSON()._id);
-		},
-		error: function(err) {
-			console.log('Failed to delete blog!');
-		}
-	});
+		this.model.destroy({
+			success: function(response) {
+				console.log('Successfully DELETED blog with _id: ' + response.toJSON()._id);
+			},
+			error: function(err) {
+				console.log('Failed to delete blog!');
+			}
+		});
 	},
 
 	render: function() {

@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>Document</title>
     
+	<link rel="stylesheet" type="text/css" href="./node_modules/sweetalert/dist/sweetalert.css">
+	<script src="./node_modules/sweetalert/dist/sweetalert.min.js"></script>
+	
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
    
    
 </head>
@@ -17,37 +20,42 @@
 			<thead>
 				<tr>
 				
-					<th>Formato</th>
-					<th>Fonte</th>
+					<th>Format</th>
+					<th>Font</th>
 					<th>Action</th>
 				</tr>
 				<tr>
-					<td><input class="form-control formato-input"></td>
-					<td><input class="form-control fonte-input"></td>
-					<td><button class="btn btn-primary add-post">Add</button></td>
+					<td><input id="formato" class="form-control formato-input"></td>
+					<td><input id="fonte" class="form-control fonte-input"></td>
+					<td><button class="btn btn-primary add-post" onclick="crawlerThisWebSite()">Load</button></td>
 				</tr>
 				<tr>
 				
-					<th>Principais Manchetes</th>
-					<th>Fonte</th>
+					<th>Posts</th>
+					<th>Font</th>
 					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody class="posts-list"></tbody>
 		</table>
 	</div>
-
+	
+	
 	<script type="text/template" class="posts-list-template">
-	<td><a href="#"><span class="titulo"><%= titulo %></span></a></td>
-	<td><span class="fonte"><%= fonte %></span></td>
+	<td><span class="titulo"><%= titulo %></span></td>
+	<td><a href="<%= fonte %>"><span class="fonte"><%= fonte %></a></span></td>
 	<td><button class="btn btn-danger delete-post">Delete</button></td>
 
 	</script>
-     <script src="./vendor/jquery/dist/jquery.js"></script>
-     <script src="./vendor/underscore/underscore.js"></script>
-    <script src="./vendor/backbone/backbone.js"></script>
+
+	<script src="./dist/js/validation-crawler.js"></script>
+
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/underscore/underscore-min.js"></script>
+    <script src="./node_modules//backbone/backbone.js"></script>
+
     
    
-    <script src="./assets/js/main.js"></script>
+    <script src="./dist/js/main.js"></script>
 </body>
 </html>
