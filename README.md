@@ -1,5 +1,5 @@
 # CrawlerPosts with backbone
- Look description in (portuguese)[https://github.com/IgorVieira/crawlerPosts/blob/master/Portuguese.md]
+ Look README in [portuguese](https://github.com/IgorVieira/crawlerPosts/blob/master/Portuguese.md)
 
 ## Requirements
 
