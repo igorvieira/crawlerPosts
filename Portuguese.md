@@ -3,9 +3,12 @@
 
 ## Requisitos
 
-- Nodejs
+- [Nodejs](https://nodejs.org/en/)
+- Gulp (npm install gulp -g)
 - Nodemon (npm install nodemon -g)
-- babel-node (npm install babel-node -g ) 
+- babel-node (npm install babel-node -g )
+- [Mongodb](https://www.mongodb.com/)  
+
 
 
 ## Modo de uso
@@ -13,15 +16,22 @@
 ```
  git clone https://github.com/IgorVieira/crawlerPosts.git
 ```
- Entre no diretório cliente e digite
+ Entre no diretório cliente e digite:
 
 ```
- npm install
- npm start
+ npm install &&  gulp
+
 ```
+ Em outro terminal e no mesmo diretório:
+
+ ```
+  npm start
+
+ ```
 
 
-In other terminal, enter the server directory and
+In other terminal, enter the server directory and:
+
 ```
  
  npm install

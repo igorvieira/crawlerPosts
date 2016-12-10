@@ -3,9 +3,11 @@
 
 ## Requirements
 
-- Nodejs
+- [Nodejs](https://nodejs.org/en/)
+- Gulp (npm install gulp -g)
 - Nodemon (npm install nodemon -g)
-- babel-node (npm install babel-node -g ) 
+- babel-node (npm install babel-node -g )
+- [Mongodb](https://www.mongodb.com/)  
 
 
 ## Usage
@@ -14,17 +16,27 @@
  git clone https://github.com/IgorVieira/crawlerPosts.git
 ```
  
-Enter the client directory and
+Enter the client directory and:
+
 ```
- npm start
- npm install
+ npm install && gulp
+
+
 ```
 
 
-In other terminal, enter the server directory and
+In another terminal and in the same directory:
 ```
- npm start
+npm start
+
+````
+
+In other terminal, enter the server directory and:
+
+```
  npm install
+ npm start
+ 
 ```
 
 Open in localhost:3000
