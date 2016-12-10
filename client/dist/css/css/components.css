@@ -1,2 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #E8E8E4; }
+
 .button {
-  color: #fff; }
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  line-height: 44px;
+  text-decoration: none;
+  color: white;
+  border-radius: 4px;
+  width: 120px;
+  height: 40px;
+  -moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out; }
+  .button.button-load {
+    background-color: #376885;
+    border: 1.5px #376885;
+    text-shadow: 0 -1px -1px #274A5E;
+    -moz-box-shadow: 0 4px 0 #274A5E, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 0 #274A5E, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 0 #274A5E, 0 5px 5px 1px rgba(0, 0, 0, 0.4); }
+    .button.button-load:hover {
+      text-shadow: 0 -1px -1px #376885;
+      -moz-box-shadow: 0 4px 0 #376885, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: 0 4px 0 #376885, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 0 #376885, 0 5px 5px 1px rgba(0, 0, 0, 0.4); }
+    .button.button-load:active {
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+  .button.button-delete {
+    background-color: #FF6C6A;
+    border: 1.5px #FF6C6A;
+    text-shadow: 0 -1px -1px #af3a2a;
+    -moz-box-shadow: 0 4px 0 #af3a2a, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 0 #af3a2a, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 0 #af3a2a, 0 5px 5px 1px rgba(0, 0, 0, 0.4); }
+    .button.button-delete:hover {
+      text-shadow: 0 -1px -1px #FF6C6A;
+      -moz-box-shadow: 0 4px 0 #FF6C6A, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: 0 4px 0 #FF6C6A, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 0 #FF6C6A, 0 5px 5px 1px rgba(0, 0, 0, 0.4); }
+    .button.button-delete:active {
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+
+input[type="text"] {
+  width: 100%;
+  max-width: 100%;
+  padding: 6px 12px;
+  border-radius: 0px;
+  border: 2px solid #000;
+  margin: .5em 0 0.8em 0; }

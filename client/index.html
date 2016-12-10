@@ -9,7 +9,7 @@
 	
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-   
+    <link rel="stylesheet" href="dist/css/minify/main.css">
    
 </head>
 <body>
@@ -25,9 +25,9 @@
 					<th>Action</th>
 				</tr>
 				<tr>
-					<td><input id="formato" class="form-control formato-input"></td>
-					<td><input id="fonte" class="form-control fonte-input"></td>
-					<td><button class="btn btn-primary add-post" onclick="crawlerThisWebSite()">Load</button></td>
+					<td><input type="text" id="formato" class="form-control formato-input"></td>
+					<td><input type="text" id="fonte" class="form-control fonte-input"></td>
+					<td><button class="button button-load add-post" onclick="crawlerThisWebSite()">Load</button></td>
 				</tr>
 				<tr>
 				
@@ -44,7 +44,7 @@
 	<script type="text/template" class="posts-list-template">
 	<td><span class="titulo"><%= titulo %></span></td>
 	<td><a href="<%= fonte %>"><span class="fonte"><%= fonte %></a></span></td>
-	<td><button class="btn btn-danger delete-post">Delete</button></td>
+	<td><button class="button button-delete delete-post">Delete</button></td>
 
 	</script>
 
