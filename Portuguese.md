@@ -37,3 +37,8 @@ Segundo peguei os elementos que continham os dados e a url.
 
 Depois adicionei todos eles ao meu minerador de dados, e salvei todos os dados da página no meu banco de dados.
 ![JovemNerd] (https://github.com/IgorVieira/crawlerPosts/blob/master/images/foto3.png?raw=true)
+
+
+
+
+Obrigado =]
