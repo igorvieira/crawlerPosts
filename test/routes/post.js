@@ -1,7 +1,14 @@
+/* global describe, before, after, beforeEach, it */
+/* global expect, app, config, request */
+
+
+
+
+
 
 describe('Route: Posts', () => {
   
-
+  
   describe('GET /api/posts', () => {
       it('should be get all posts', done => {
       request
@@ -25,7 +32,7 @@ describe('Route: Posts', () => {
     });
   });
  })
-   
+
   
 });
 
