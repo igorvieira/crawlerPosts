@@ -13,7 +13,7 @@ var Post = Backbone.Model.extend({
 // Backbone Collection
 
 var Posts = Backbone.Collection.extend({
-	url: 'http://localhost:3000/api/manchetes'
+	url: 'http://localhost:3000/api/posts'
 });
 
 // instantiate a Collection
