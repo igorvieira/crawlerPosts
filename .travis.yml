@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- 6.9.2
+notifications:
+- igor.p.r.vieira@gmail.com
+services:
+- mongodb
+env:
+  global:
+  - NODE_ENV: test

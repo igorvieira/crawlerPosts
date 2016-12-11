@@ -1,20 +1,12 @@
 module.exports = (app) =>{
+   let controller = app.controllers.postController
 
-    let controller = app.controllers.postController
-   
-
-   app.route('/api/manchetes')
+   app.route('/api/posts')
         .get(controller.listPosts)
         .post(controller.savePosts)
 
- 
-
-    app.route('/api/manchetes/:id')
+    app.route('/api/posts/:postId')
         .delete(controller.deletePostForId) 
-
-   
-
-
       
 }
 

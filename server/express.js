@@ -18,7 +18,6 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 
-app.set('port', (process.env.PORT || 3000))
 
 consign({cwd:'server', verbose:false})
     .include('models')

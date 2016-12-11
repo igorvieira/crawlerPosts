@@ -1,11 +1,3 @@
-import path from 'path'
-
-let rootPath = path.normalize(__dirname + '/../')
-
-
-module.exports = {
-
-  rootPath:rootPath,
-  db:'mongodb://localhost/lettpost'
-
-}
+const { NODE_ENV } = process.env;
+const config = `./config/config.${NODE_ENV || 'development'}.js`;
+module.exports = require(config);
