@@ -5,6 +5,8 @@ notifications:
 - igor.p.r.vieira@gmail.com
 services:
 - mongodb
+before_script:
+ - sudo npm start
 env:
   global:
   - NODE_ENV: start
