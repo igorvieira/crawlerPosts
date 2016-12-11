@@ -6,7 +6,8 @@ notifications:
 services:
 - mongodb
 script:
-- node serve/server
+  global:
+    - NODE_ENV: start
 env:
   global:
   - NODE_ENV: test
