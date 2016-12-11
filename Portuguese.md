@@ -1,5 +1,5 @@
 # CrawlerPosts com backbone
-
+[![Build Status](https://travis-ci.org/IgorVieira/crawlerPosts.svg?branch=master)](https://travis-ci.org/IgorVieira/crawlerPosts)
 
 ## Requisitos
 
