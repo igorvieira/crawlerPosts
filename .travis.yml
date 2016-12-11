@@ -5,9 +5,7 @@ notifications:
 - igor.p.r.vieira@gmail.com
 services:
 - mongodb
-script:
-  global:
-    - NODE_ENV: start
 env:
   global:
+  - NODE_ENV: start
   - NODE_ENV: test
