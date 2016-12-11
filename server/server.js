@@ -2,7 +2,7 @@ import config from "./config"
 import app from "./express"
 import http from "http"
 
-require('./database')(config.mongodb.uri)
+
 
 app.set('port', (process.env.PORT || config.server.port))
 const port = app.get('port')

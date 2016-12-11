@@ -1,11 +1,8 @@
-import superagent from 'superagent'
+import supertest from 'supertest'
 import chai from 'chai'
-import ch from 'charlatan'
-import url from 'url'
-const ABS_URL = 'http://localhost:3000/api/posts';
+import app from '../server/express'
 
-global.url = url
-global.ABS_URL = ABS_URL
-global.ch = ch
-global.should = chai.should()
-global.request = superagent
+
+global.app = app;
+global.expect = chai.expect
+global.request = supertest(app)

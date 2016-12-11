@@ -6,7 +6,6 @@
   "scripts": {
     "start": "nodemon --exec babel-node server/server.js",
     "test": "mocha --opts test/mocha.opts test/**/*.js"
-    
   },
   "keywords": [],
   "author": "",
@@ -23,12 +22,11 @@
     "mongo-sanitize": "^1.0.0",
     "mongoose": "4.6.4",
     "request": "^2.79.0"
-       
   },
   "devDependencies": {
-    "chai": "3.5.0" ,
+    "chai": "3.5.0",
     "charlatan": "^1.1.0",
     "mocha": "2.5.3",
-    "superagent": "^3.1.0"    
+    "supertest": "^2.0.1"
   }
 }

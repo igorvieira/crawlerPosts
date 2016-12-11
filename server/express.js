@@ -1,11 +1,10 @@
 import express from 'express'
 import consign from 'consign'
 import bodyParser from 'body-parser'
-
-
+import config from "./config"
 
 const app = express()
-
+require('./database')(config.mongodb.uri)
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");

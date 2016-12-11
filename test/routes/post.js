@@ -1,38 +1,25 @@
-/* global describe, before, after, beforeEach, it */
-/* global expect, app, config, request */
-
-
-
-
-
-
 describe('Route: Posts', () => {
-  
   
   describe('GET /api/posts', () => {
       it('should be get all posts', done => {
       request
-        .get(url.resolve(ABS_URL,'posts'))
+        .get('/api/posts')
         .end((err , res) => {
-          res.should.be.exist;
-          res.status.should.be.eql(200);
+          expect(res.body).to.be.instanceof(Array);
           done();
         })
     });
   })
 
- describe('Not Found 404 ', () => {
-    it('throws error when post not exist', done => {
-    request
-    .get(url.resolve(ABS_URL+'/asdasdasd', 'posts'))
-      .end(res => {
-         res.should.be.exist;
-        res.status.should.be.eql(404)
-      done()
+    describe('status 404', () => {
+      it('throws error when posts not exist', done => {
+        request.get('/api/posts/id-not-exist')
+          .expect(404)
+          .end(err => done(err));
+      });
     });
+
+
   });
- })
 
   
-});
-
