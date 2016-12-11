@@ -6,7 +6,7 @@ notifications:
 services:
 - mongodb
 before_script:
- - sudo npm start
+ - npm start
 env:
   global:
   - NODE_ENV: start
