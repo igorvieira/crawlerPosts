@@ -5,8 +5,7 @@ notifications:
 - igor.p.r.vieira@gmail.com
 services:
 - mongodb
-before_install:
- - npm install nodemon -g
+
 before_script:
  - npm start
 env:

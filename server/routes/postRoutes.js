@@ -5,7 +5,7 @@ module.exports = (app) =>{
         .get(controller.listPosts)
         .post(controller.savePosts)
 
-    app.route('/api/posts/:postId')
+    app.route('/api/posts/:id')
         .delete(controller.deletePostForId) 
       
 }
