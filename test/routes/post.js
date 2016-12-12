@@ -1,4 +1,34 @@
 describe('Route: Posts', () => {
+
+  const Posts = app.models.post
+
+  let id = null
+
+
+  beforeEach(done => {
+    Posts.remove({}, () => {
+      console.log('Delete all datas in database-test')
+      done()
+    })
+  });
+
+describe('POST /api/posts', () => {
+      it('creates a new post', done => {
+        request.post('/api/posts')
+        .send({ 
+            formato: '#content h1',
+            fonte:'http://www.brasil.gov.br/'
+          })
+          .expect(200)
+          .end((err, res) => {
+            expect(res.body[0].formato).to.eql('#content h1');
+            expect(res.body[0].fonte).to.eql('http://www.brasil.gov.br/');
+            id = res.body[0]._id
+            done(err);
+          });
+      });
+    });
+
   
   describe('GET /api/posts', () => {
       it('should be get all posts', done => {
@@ -10,6 +40,19 @@ describe('Route: Posts', () => {
         })
     });
   })
+
+ describe('DELETE /api/posts/:id', () => {
+    describe('status 200', () => {
+      it('removes a posts', done => {
+        request.delete(`/api/posts/${id}`)
+          .expect(200)
+          .end(err => done(err));
+      });
+    });
+  });
+
+
+   
 
     describe('status 404', () => {
       it('throws error when posts not exist', done => {
