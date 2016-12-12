@@ -45,5 +45,5 @@ gulp.task('watch', () => {
 
 
 gulp.task('default', () =>  {
-	gulp.start('watch');
+	gulp.start('js-compress','image-optimize','sass','sass-compress','watch');
 });
