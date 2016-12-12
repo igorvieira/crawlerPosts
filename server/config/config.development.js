@@ -8,6 +8,12 @@ export default {
     extended: true
   },
   mongodb: {
-    uri: 'mongodb://localhost:27017/lettpost'
-  }
+    uri: 'mongodb://localhost:27017/lett_database'
+  },
+  consign: [
+    {
+      cwd:'server',
+      verbose:false
+    }
+  ]
 };
