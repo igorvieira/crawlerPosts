@@ -6,7 +6,7 @@ module.exports = app =>{
 let post = mongoose.Schema({
   titulo:{
     type:String,
-    required:true,   
+    required:false,   
 
   },
   formato:{
