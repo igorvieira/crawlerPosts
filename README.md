@@ -9,7 +9,8 @@ Look README in [portuguese](https://github.com/IgorVieira/crawlerPosts/blob/mast
 - Gulp (npm install gulp -g)
 - Nodemon (npm install nodemon -g)
 - babel-node (npm install babel-node -g )
-- [Mongodb](https://www.mongodb.com/)  
+- [Mongodb](https://www.mongodb.com/)
+- OS (Linux or Windows)  
 
 
 ## Usage

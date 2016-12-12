@@ -7,7 +7,8 @@
 - Gulp (npm install gulp -g)
 - Nodemon (npm install nodemon -g)
 - babel-node (npm install babel-node -g )
-- [Mongodb](https://www.mongodb.com/)  
+- [Mongodb](https://www.mongodb.com/)
+- OS (Linux ou Windows)  
 
 
 
