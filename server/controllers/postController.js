@@ -35,14 +35,14 @@ let Post = app.models.post
   controller.listPosts = (req, res) =>{
     Post.find().sort({"titulo":-1})
     .then(post => res.json(post))
-    .catch(err => console.log(`Erro em listar dados ${err}`))
+    .catch(err => console.log(`Erro em listar dados - ${err}`))
   }
 
   controller.deletePostForId = (req, res) =>{
-       let _id = sanitize(req.params.id)
-        Post.remove({_id: _id}, function(err, doc) {
-          res.send({_id: req.params.id});
-        });
+       const _id = sanitize(req.params.id)
+        Post.remove({"_id": _id}).exec()
+        .then(() =>    res.end())
+        .catch(err => console.log(`Erro em delete objeto - ${err}`))
   }
 
 

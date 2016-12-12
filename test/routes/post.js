@@ -12,6 +12,7 @@ describe('Route: Posts', () => {
   });
 
 describe('POST /api/posts', () => {
+  describe('status 200', () => {
       it('creates a new post', done => {
         request.post('/api/posts')
         .send({ 
@@ -27,16 +28,18 @@ describe('POST /api/posts', () => {
           });
       });
     });
-
+});
   
   describe('GET /api/posts', () => {
+      describe('status 200', () => {
       it('should be get all posts', done => {
-      request
-        .get('/api/posts')
-        .end((err , res) => {
-          expect(res.body).to.be.instanceof(Array);
-          done();
-        })
+        request
+          .get('/api/posts')
+          .end((err , res) => {
+            expect(res.body).to.be.instanceof(Array);
+            done();
+          })
+      });
     });
   })
 
@@ -53,13 +56,15 @@ describe('POST /api/posts', () => {
 
    
 
-    describe('status 404', () => {
-      it('throws error when posts not exist', done => {
-        request.get('/api/posts/id-not-exist')
-          .expect(404)
-          .end(err => done(err));
+    describe('Not found  /api/posts/id-not-exist', () =>{
+      describe('status 404', () => {
+        it('throws error when posts not exist', done => {
+          request.get('/api/posts/id-not-exist')
+            .expect(404)
+            .end(err => done(err));
+        });
       });
-    });
+    })
 
 
   });
