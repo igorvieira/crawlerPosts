@@ -4,7 +4,7 @@ const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 const pump = require('pump');
  
-gulp.task('js-compress', function (cb) {
+gulp.task('js-compress',  (cb) => {
   pump([
         gulp.src('./assets/js/*.js'),
         uglify(),
@@ -30,7 +30,7 @@ gulp.task('sass', () => {
 
 });
 
-gulp.task('sass-compress', function () {
+gulp.task('sass-compress', () => {
  return gulp.src('./assets/sass/**/*.scss')
    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
    .pipe(gulp.dest('./dist/css/minify'));
