@@ -7,7 +7,6 @@ describe('Route: Posts', () => {
 
   beforeEach(done => {
     Posts.remove({}, () => {
-      console.log('Delete all datas in database-test')
       done()
     })
   });
