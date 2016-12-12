@@ -24,8 +24,8 @@ let Post = app.models.post
               })
               Post.create(manchetes)
               .then(post=>res.json(post))
-              .catch(error => {
-                console.log(`Erro em salvar dados do crawler - ${error}`)
+              .catch(err => {
+                console.log(`Error in save datas - ${err}`)
                 res.end() 
               })
     })
@@ -35,14 +35,14 @@ let Post = app.models.post
   controller.listPosts = (req, res) =>{
     Post.find().sort({"titulo":-1})
     .then(post => res.json(post))
-    .catch(err => console.log(`Erro em listar dados - ${err}`))
+    .catch(err => console.log(`Error in list datas - ${err}`))
   }
 
   controller.deletePostForId = (req, res) =>{
        const _id = sanitize(req.params.id)
         Post.remove({"_id": _id}).exec()
         .then(() =>    res.end())
-        .catch(err => console.log(`Erro em delete objeto - ${err}`))
+        .catch(err => console.log(`Error in delete object - ${err}`))
   }
 
 
