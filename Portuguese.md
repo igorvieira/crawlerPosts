@@ -8,7 +8,7 @@
 - Nodemon (npm install nodemon -g)
 - babel-node (npm install babel-node -g )
 - [Mongodb](https://www.mongodb.com/)
-- OS (Linux ou Windows)  
+- OS (Linux or Mac) 
 
 
 
