@@ -58,7 +58,7 @@ Then I added them all to my data mining, and I saved all the data on the page to
 ![JovemNerd] (https://github.com/IgorVieira/crawlerPosts/blob/master/images/foto3.png?raw=true)
 
 
-Thanks! =]
+# Thanks! =]
 
 
 

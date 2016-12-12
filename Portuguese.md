@@ -52,4 +52,4 @@ Depois adicionei todos eles ao meu minerador de dados, e salvei todos os dados d
 
 
 
-Obrigado =]
+# Obrigado =]
