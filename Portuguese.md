@@ -38,12 +38,21 @@ In other terminal, enter the server directory and:
  npm install
  npm start
 ```
+
+Depois abra em localhost:3000
+
+#Exemplo
+
 Para esse exemplo eu usei o site do jovem nerd para poder obter os principais assuntos dos nerdcasts.
 
-Primeiro eu fui ao site e inspecionei os elementos para obter os dados da página.
+##Primeiro
+
+Eu fui ao site e inspecionei os elementos para obter os dados da página.
 ![JovemNerd] (https://github.com/IgorVieira/crawlerPosts/blob/master/images/foto1.png?raw=true)
 
-Segundo peguei os elementos que continham os dados e a url.
+##Segundo
+
+Peguei os elementos que continham os dados e a url.
 ![JovemNerd] (https://github.com/IgorVieira/crawlerPosts/blob/master/images/foto2.png?raw=true)
 
 Depois adicionei todos eles ao meu minerador de dados, e salvei todos os dados da página no meu banco de dados.

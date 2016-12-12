@@ -44,13 +44,19 @@ In other terminal, enter the server directory and:
 
 Open in localhost:3000
 
+#Exemplo
 
 For this example I used the site of the jovemnerd to be able to get the main subjects of nerdcasts.
 
-First I went to the site and inspected the elements to get the page data.
+##First
+
+I went to the site and inspected the elements to get the page data.
 
 ![JovemNerd] (https://github.com/IgorVieira/crawlerPosts/blob/master/images/foto1.png?raw=true)
-Second, I took the elements that contained the data and the url.
+
+##Second
+
+I took the elements that contained the data and the url.
 
 ![JovemNerd] (https://github.com/IgorVieira/crawlerPosts/blob/master/images/foto2.png?raw=true)
 Then I added them all to my data mining, and I saved all the data on the page to my database.
