@@ -10,7 +10,7 @@ Look README in [portuguese](https://github.com/IgorVieira/crawlerPosts/blob/mast
 - Nodemon (npm install nodemon -g)
 - babel-node (npm install babel-node -g )
 - [Mongodb](https://www.mongodb.com/)
-- OS (Linux or Windows)  
+- OS (Linux or Mac)  
 
 
 ## Usage
