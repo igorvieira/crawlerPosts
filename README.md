@@ -52,16 +52,16 @@ For this example I used the site of the jovemnerd to be able to get the main sub
 
 I went to the site and inspected the elements to get the page data.
 
-![JovemNerd] (https://github.com/IgorVieira/crawlerPosts/blob/master/images/foto1.png?raw=true)
+![JovemNerd](https://github.com/IgorVieira/crawlerPosts/blob/master/images/foto1.png?raw=true)
 
 ##Second
 
 I took the elements that contained the data and the url.
 
-![JovemNerd] (https://github.com/IgorVieira/crawlerPosts/blob/master/images/foto2.png?raw=true)
+![JovemNerd](https://github.com/IgorVieira/crawlerPosts/blob/master/images/foto2.png?raw=true)
 Then I added them all to my data mining, and I saved all the data on the page to my database.
 
-![JovemNerd] (https://github.com/IgorVieira/crawlerPosts/blob/master/images/foto3.png?raw=true)
+![JovemNerd](https://github.com/IgorVieira/crawlerPosts/blob/master/images/foto3.png?raw=true)
 
 
 # Thanks! =]
