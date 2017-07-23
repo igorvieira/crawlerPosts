@@ -44,11 +44,11 @@ In other terminal, enter the server directory and:
 
 Open in localhost:3000
 
-#Exemplo
+# Exemplo
 
 For this example I used the site of the jovemnerd to be able to get the main subjects of nerdcasts.
 
-##First
+## First
 
 I went to the site and inspected the elements to get the page data.
 
